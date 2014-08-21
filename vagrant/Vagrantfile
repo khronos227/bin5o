@@ -135,6 +135,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       recipe[nginx]
       recipe[nodejs]
       recipe[mysql::server]
+      recipe[mysql-env]
     ]
   end
 end
