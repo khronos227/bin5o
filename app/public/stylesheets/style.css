@@ -1,8 +1,121 @@
 body {
+  /*
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  */
 }
 
 a {
   color: #00B7FF;
+}
+
+#masterWrap {
+  width: 960px;
+  height: 760px;
+  background-color: #000000;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.silver {
+ background-image: linear-gradient(to top left, #A5A5A5, #BABAC2, #E8E8E8, #A5A5A5, #BABAC2);
+}
+
+#mainWrap {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  background-color: black;
+  height: 600px;
+}
+
+#title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 0 0 25px #edf8ff, 0 0 20px #edf8ff, 0 0 0.40px #edf8ff;
+  font-family: 'Sonsie One', cursive;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#historyBoard {
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+#historyBoard ul {
+  width: 885px;
+  margin: 0 auto;
+}
+
+#historyBoard li {
+  display: block;
+  height: 95px;
+  border-bottom: 1px solid white;
+  background-color: white;
+  background-image:
+    linear-gradient(
+      145deg,
+      transparent 0,
+      transparent 16px,
+      #cccccc 16px,
+      #cccccc 100%),
+    linear-gradient(
+      215deg,
+      transparent 0,
+      transparent 19px,
+      #cccccc 19px,
+      #cccccc 100%);
+  background-size:
+    51% 20%,
+    51% 20%;
+  background-position:
+    left bottom,
+    right bottom;
+  background-repeat: no-repeat;
+}
+
+#historyBoard .boardRow {
+  height: 100%;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(rgba(255,255,255,0)));
+  background-position: left bottom;
+  background-size: 100% 20%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.color1 {
+  color: #00bf00;
+}
+
+.color2 {
+  color: #0000bf;
+}
+
+.color3 {
+  color: #bfbf00;
+}
+
+.color4 {
+  color: #bf0000;
+}
+
+.color5 {
+  color: #bf00bf;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
 }
