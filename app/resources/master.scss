@@ -5,6 +5,8 @@ $dispHeight: 600px;
 $otherHeight: 160px;
 $boxWidth: 59px;
 $boxHeight: 100px;
+$subDispWid: 360px;
+$bingoButtonWid: ($baseWidth - $subDispWid) / 3;
 #masterWrap{
   width: $baseWidth;
   height: $dispHeight + $otherHeight;
@@ -60,6 +62,63 @@ $boxHeight: 100px;
           position: left bottom;
           repeat: no-repeat;
         }
+        .histBallWrap{
+          width: $boxWidth;
+          height: $boxHeight;
+          @include left;
+          .histBall{
+            $ballSize: $boxWidth - 3px;
+            width: $ballSize;
+            height: $ballSize;
+            padding-top: ($boxHeight - $ballSize) / 2;
+            margin: 0 auto;
+            .ball{
+              width: $ballSize;
+              height: $ballSize;
+              text-align: center;
+              display: table-cell;
+              vertical-align: middle;
+              border-radius: 50%;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+	      box-shadow: 0px 0px 4px 2px rgba(128, 128, 128, 0.5);
+              p{
+                font:{
+                  size: 15px;
+                  family: 'Sonsie One', cursive;
+                  weight: bold;
+                  style: italic;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #otherWrap{
+    padding-top: 20px;
+    height: $otherHeight - 20px;
+    .bingoButton{
+      width: $bingoButtonWid;
+      height: $otherHeight - 20px;
+      @include left;
+    }
+    .resetButton{
+      width: 60px;
+      height: $otherHeight - 20px;
+      @include left;
+      button{
+        margin-top: $otherHeight - 70px;
+      }
+    }
+    #subDispWrap{
+      width: $subDispWid - 70px;
+      padding-left: 10px;
+      @include left;
+      #subDisp{
+        background-color: #000000;
+        height: $otherHeight - 20px;
       }
     }
   }
@@ -85,8 +144,34 @@ $boxHeight: 100px;
   color: $c;
 }
 
+@mixin bingoBallColor($index){
+  $c: #000000;
+  @if $index == 1{
+    $c: #00BF00;
+  }@else if $index == 2{
+    $c: #0000BF;
+  }@else if $index == 3{
+    $c: #BFBF00;
+  }@else if $index == 4{
+    $c: #BF0000;
+  }@else if $index == 5{
+    $c: #BF00BF;
+  }
+  background:{
+    color: $c;
+    image: radial-gradient(at 100px 100px,white,$c);
+    image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(#ffffff), to($c));
+  }
+}
+
 @for $i from 1 through 5{
   .color#{$i}{
     @include bingoColor($i);
   }
+  .ballColor#{$i}{
+    @include bingoBallColor($i);
+  }
 }
+
+@import "metalButton";
+@include metalButton($bingoButtonWid, 140px);

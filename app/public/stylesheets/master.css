@@ -4,7 +4,12 @@ ul, li {
   padding: 0;
 }
 
-/* line 8, ../../resources/master.scss */
+/* line 6, ../../resources/common.scss */
+li {
+  list-style-type: none;
+}
+
+/* line 10, ../../resources/master.scss */
 #masterWrap {
   width: 960px;
   height: 760px;
@@ -12,7 +17,7 @@ ul, li {
   margin: 0 auto;
   padding: 20px;
 }
-/* line 14, ../../resources/master.scss */
+/* line 16, ../../resources/master.scss */
 #masterWrap #mainWrap {
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -20,7 +25,7 @@ ul, li {
   background-color: black;
   height: 600px;
 }
-/* line 20, ../../resources/master.scss */
+/* line 22, ../../resources/master.scss */
 #masterWrap #mainWrap #title {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -31,18 +36,18 @@ ul, li {
   font-weight: bold;
   font-style: italic;
 }
-/* line 36, ../../resources/master.scss */
+/* line 38, ../../resources/master.scss */
 #masterWrap #mainWrap #historyBoard {
   width: 900px;
   height: 500px;
   margin: 0 auto;
 }
-/* line 40, ../../resources/master.scss */
+/* line 42, ../../resources/master.scss */
 #masterWrap #mainWrap #historyBoard ul {
   width: 885px;
   margin: 0 auto;
 }
-/* line 44, ../../resources/master.scss */
+/* line 46, ../../resources/master.scss */
 #masterWrap #mainWrap #historyBoard li {
   display: block;
   height: 100px;
@@ -52,7 +57,7 @@ ul, li {
   background-position: left bottom, right bottom;
   background-repeat: no-repeat;
 }
-/* line 55, ../../resources/master.scss */
+/* line 57, ../../resources/master.scss */
 #masterWrap #mainWrap #historyBoard .boardRow {
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
@@ -60,33 +65,198 @@ ul, li {
   background-position: left bottom;
   background-repeat: no-repeat;
 }
+/* line 65, ../../resources/master.scss */
+#masterWrap #mainWrap #historyBoard .boardRow .histBallWrap {
+  width: 59px;
+  height: 100px;
+  float: left;
+}
+/* line 69, ../../resources/master.scss */
+#masterWrap #mainWrap #historyBoard .boardRow .histBallWrap .histBall {
+  width: 56px;
+  height: 56px;
+  padding-top: 22px;
+  margin: 0 auto;
+}
+/* line 75, ../../resources/master.scss */
+#masterWrap #mainWrap #historyBoard .boardRow .histBallWrap .histBall .ball {
+  width: 56px;
+  height: 56px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px rgba(128, 128, 128, 0.5);
+}
+/* line 85, ../../resources/master.scss */
+#masterWrap #mainWrap #historyBoard .boardRow .histBallWrap .histBall .ball p {
+  font-size: 15px;
+  font-family: 'Sonsie One', cursive;
+  font-weight: bold;
+  font-style: italic;
+}
+/* line 99, ../../resources/master.scss */
+#masterWrap #otherWrap {
+  padding-top: 20px;
+  height: 140px;
+}
+/* line 102, ../../resources/master.scss */
+#masterWrap #otherWrap .bingoButton {
+  width: 200px;
+  height: 140px;
+  float: left;
+}
+/* line 107, ../../resources/master.scss */
+#masterWrap #otherWrap .resetButton {
+  width: 60px;
+  height: 140px;
+  float: left;
+}
+/* line 111, ../../resources/master.scss */
+#masterWrap #otherWrap .resetButton button {
+  margin-top: 90px;
+}
+/* line 115, ../../resources/master.scss */
+#masterWrap #otherWrap #subDispWrap {
+  width: 290px;
+  padding-left: 10px;
+  float: left;
+}
+/* line 119, ../../resources/master.scss */
+#masterWrap #otherWrap #subDispWrap #subDisp {
+  background-color: #000000;
+  height: 140px;
+}
 
-/* line 68, ../../resources/master.scss */
+/* line 127, ../../resources/master.scss */
 .silver {
   background-image: linear-gradient(to top left, #a5a5a5, #babac2, #e8e8e8, #a5a5a5, #babac2);
 }
 
-/* line 89, ../../resources/master.scss */
+/* line 168, ../../resources/master.scss */
 .color1 {
   color: #00bf00;
 }
 
-/* line 89, ../../resources/master.scss */
+/* line 171, ../../resources/master.scss */
+.ballColor1 {
+  background-color: #00bf00;
+  background-image: radial-gradient(at 100px 100px, white, #00bf00);
+  background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#00bf00));
+}
+
+/* line 168, ../../resources/master.scss */
 .color2 {
   color: #0000bf;
 }
 
-/* line 89, ../../resources/master.scss */
+/* line 171, ../../resources/master.scss */
+.ballColor2 {
+  background-color: #0000bf;
+  background-image: radial-gradient(at 100px 100px, white, #0000bf);
+  background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#0000bf));
+}
+
+/* line 168, ../../resources/master.scss */
 .color3 {
   color: #bfbf00;
 }
 
-/* line 89, ../../resources/master.scss */
+/* line 171, ../../resources/master.scss */
+.ballColor3 {
+  background-color: #bfbf00;
+  background-image: radial-gradient(at 100px 100px, white, #bfbf00);
+  background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#bfbf00));
+}
+
+/* line 168, ../../resources/master.scss */
 .color4 {
   color: #bf0000;
 }
 
-/* line 89, ../../resources/master.scss */
+/* line 171, ../../resources/master.scss */
+.ballColor4 {
+  background-color: #bf0000;
+  background-image: radial-gradient(at 100px 100px, white, #bf0000);
+  background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#bf0000));
+}
+
+/* line 168, ../../resources/master.scss */
 .color5 {
   color: #bf00bf;
+}
+
+/* line 171, ../../resources/master.scss */
+.ballColor5 {
+  background-color: #bf00bf;
+  background-image: radial-gradient(at 100px 100px, white, #bf00bf);
+  background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#bf00bf));
+}
+
+/* line 2, ../../resources/metalButton.scss */
+.metal {
+  position: relative;
+  outline: none;
+  font: bold 6em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  text-align: center;
+  color: #333333;
+  text-shadow: rgba(102, 102, 102, 0.5) 0 -1px 0, rgba(255, 255, 255, 0.6) 0 2px 1px;
+  background-color: #e6e6e6;
+  box-shadow: inset #262626 0 0px 0px 4px, inset rgba(38, 38, 38, 0.8) 0 -1px 5px 4px, inset rgba(0, 0, 0, 0.25) 0 -1px 0px 7px, inset rgba(255, 255, 255, 0.7) 0 2px 1px 7px, rgba(0, 0, 0, 0.15) 0 -5px 6px 4px, rgba(255, 255, 255, 0.5) 0 5px 6px 4px;
+  /* outer HL */
+  transition: color .2s;
+}
+
+/* line 19, ../../resources/metalButton.scss */
+.metal.linear {
+  margin: 10px;
+  width: 180px;
+  font-size: 2em;
+  height: 120px;
+  border-radius: 1em;
+  border: 0px;
+  background-image: -webkit-repeating-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0.1) 7.5%), -webkit-repeating-linear-gradient(left, transparent 0%, transparent 4%, rgba(0, 0, 0, 0.03) 4.5%), -webkit-repeating-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1.2%, rgba(255, 255, 255, 0.15) 2.2%), linear-gradient(180deg, #c7c7c7 0%, #e6e6e6 47%, #c7c7c7 53%, #b3b3b3 100%);
+}
+
+/* line 35, ../../resources/metalButton.scss */
+.metal:active {
+  color: #0066cc;
+  text-shadow: rgba(0, 51, 102, 0.3) 0 -1px 0, #b3d9ff 0 2px 1px, #99ddff 0 0 5px, rgba(0, 127, 255, 0.6) 0 0 20px;
+  box-shadow: inset #004c99 0 0px 0px 4px, inset rgba(0, 38, 77, 0.4) 0 -1px 5px 4px, inset rgba(0, 51, 102, 0.25) 0 -1px 0px 7px, inset rgba(255, 255, 255, 0.7) 0 2px 1px 7px, rgba(128, 191, 255, 0.8) 0 0px 3px 2px, rgba(51, 102, 153, 0.25) 0 -5px 6px 4px, #e8f2fc 0 5px 6px 4px;
+  /* outer HL */
+}
+
+/* line 48, ../../resources/metalButton.scss */
+.radial.metal.reset {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 20px;
+  border: 0;
+  background-image: -webkit-radial-gradient(50% 0%, 8% 50%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(50% 100%, 12% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(0% 50%, 50% 7%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(100% 50%, 50% 5%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), -webkit-repeating-radial-gradient(50% 50%, 100% 100%, transparent 0%, transparent 3%, rgba(0, 0, 0, 0.1) 3.5%), -webkit-repeating-radial-gradient(50% 50%, 100% 100%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0.1) 7.5%), -webkit-repeating-radial-gradient(50% 50%, 100% 100%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1.2%, rgba(255, 255, 255, 0.2) 2.2%), -webkit-radial-gradient(50% 50%, 200% 50%, #e6e6e6 5%, #d9d9d9 30%, #999999 100%);
+}
+
+/* line 64, ../../resources/metalButton.scss */
+.metal.radial:before, .metal.radial:after {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  /* fake conical gradients */
+  background-image: -webkit-radial-gradient(50% 0%, 10% 50%, rgba(0, 0, 0, 0.1) 0%, transparent 100%), -webkit-radial-gradient(50% 100%, 10% 50%, rgba(0, 0, 0, 0.1) 0%, transparent 100%), -webkit-radial-gradient(0% 50%, 50% 10%, rgba(0, 0, 0, 0.1) 0%, transparent 100%), -webkit-radial-gradient(100% 50%, 50% 6%, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
+}
+
+/* line 78, ../../resources/metalButton.scss */
+.metal.radial:before {
+  transform: rotate(65deg);
+}
+
+/* line 79, ../../resources/metalButton.scss */
+.metal.radial:after {
+  transform: rotate(-65deg);
 }
