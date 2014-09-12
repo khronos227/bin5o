@@ -15,6 +15,20 @@ This is bingo app based on Node.js.
 ## how to run app
     ./bin/www
 
+## about Sass
+- CSSの作成にはSassを利用。<br>
+(参考：http://liginc.co.jp/web/html-css/css/56599)
+  1. sassをインストール
+          gem install sass
+  2. Koalaをダウンロード<br>
+     http://koala-app.com/
+- CSSをプログラミングライクに構築することが可能
+  - 変数
+  - 四則演算
+  - 制御フロー
+  - 外部sassのインポート
+  - etc...
+
 [memo]
 - ボタン1<br>
 http://coliss.com/articles/build-websites/operation/css/css3-brushed-metal-style.html
