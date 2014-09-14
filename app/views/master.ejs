@@ -4,6 +4,9 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/master.css' />
 <link href='http://fonts.googleapis.com/css?family=Sonsie+One&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type "text/javascript" src="/javascript/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/javascript/master.js"></script>
   </head>
   <body>
     <div id="masterWrap" class="silver">
@@ -147,16 +150,16 @@
       </div>
       <div id="otherWrap">
           <div class="bingoButton">
-            <button class="metal linear">Get</button>
+            <button id="getBall" class="metal linear">Get</button>
           </div>
           <div class="bingoButton">
-            <button class="metal linear">Quick</button>
+            <button id="quickGetBall" class="metal linear">Quick</button>
           </div>
           <div class="bingoButton">
-            <button class="metal linear">Ranking</button>
+            <button id="getRanking" class="metal linear">Ranking</button>
           </div>
           <div class="resetButton">
-            <button class="metal radial reset"></button>
+            <button id="resetGame" class="metal radial reset"></button>
           </div>
           <div id="subDispWrap">
             <div id="subDisp">
