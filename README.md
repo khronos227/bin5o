@@ -36,3 +36,5 @@ http://coliss.com/articles/build-websites/operation/css/css3-brushed-metal-style
 http://www.panarea-is.com/css3%EF%BC%9Acss%E3%81%AE%E3%81%BF%E3%81%A7%E6%96%9C%E7%B7%9A%E8%83%8C%E6%99%AF%E3%82%92%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B/
 - 球体<br>
 http://buckamargeblog.wordpress.com/2013/06/03/css3%E3%81%A7%E7%AB%8B%E4%BD%93%E7%9A%84%E3%81%AA%E7%90%83%E4%BD%93%E4%BD%9C%E6%88%90/
+- スケールアウト<br>
+https://gist.github.com/nulltask/89e6f36e194c951697a0
