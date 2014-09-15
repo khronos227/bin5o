@@ -38,3 +38,7 @@ http://www.panarea-is.com/css3%EF%BC%9Acss%E3%81%AE%E3%81%BF%E3%81%A7%E6%96%9C%E
 http://buckamargeblog.wordpress.com/2013/06/03/css3%E3%81%A7%E7%AB%8B%E4%BD%93%E7%9A%84%E3%81%AA%E7%90%83%E4%BD%93%E4%BD%9C%E6%88%90/
 - スケールアウト<br>
 https://gist.github.com/nulltask/89e6f36e194c951697a0
+- ユーザ識別(弱)<br>
+そこまで強力な識別は必要ないので、接続してきたIPアドレスで判別
+      socket.conn.remoteAdress
+にて取得可能
