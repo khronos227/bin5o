@@ -4,7 +4,7 @@ This is bingo app based on Node.js.
 # environments
 - nginx : 静的ファイルアクセス / app本体への逆proxy
 - nodejs : app本体
-- mysql : ビンゴデータ格納
+- mongodb : ビンゴデータ格納
 
 ## how to make environment
     (vagrant box add opscode-centos-6.5 http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-6.5_chef-provisionerless.box)
@@ -29,6 +29,19 @@ This is bingo app based on Node.js.
   - 外部sassのインポート
   - etc...
 
+## about mongoDB
+- ログイン時に起動しておきたい場合
+ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+
+- mongodb 起動
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
+
+- launchctlを使わずに 起動
+mongod --config /usr/local/etc/mongod.conf
+
+- 起動確認用接続
+mongo
+
 [memo]
 - ボタン1<br>
 http://coliss.com/articles/build-websites/operation/css/css3-brushed-metal-style.html
@@ -40,5 +53,5 @@ http://buckamargeblog.wordpress.com/2013/06/03/css3%E3%81%A7%E7%AB%8B%E4%BD%93%E
 https://gist.github.com/nulltask/89e6f36e194c951697a0
 - ユーザ識別(弱)<br>
 そこまで強力な識別は必要ないので、接続してきたIPアドレスで判別
-      socket.conn.remoteAdress
+      socket.conn.remoteAddress
 にて取得可能

@@ -1,4 +1,17 @@
 var config = require('config');
+var mongoose = require('mongoose');
+var db = mongoose.connect('mongodb://localhost/bin5o');
+
+var Schema = mongoose.Schema;
+var CardRows = new Schema({
+  row: [Number]
+});
+var Cards = new Schema({
+  address: String,
+  nums: [CardRows]
+});
+mongoose.model('Row', CardRows);
+mongoose.model('Card', Cards);
 
 exports.makeSocketIo = function(server){
   var numbers = [].concat(config.get('balls'));
@@ -33,7 +46,34 @@ exports.makeSocketIo = function(server){
           socket.emit('resetResult', JSON.stringify(hist));
         });
       }else{ //それ以外はClientとして扱う
-        
+        var address = socket.conn.remoteAddress;
+        var Card = mongoose.model('Card');
+        Card.find({'address': address}, function(err, cards){
+          if(cards.length > 0){
+            console.log("card was found");
+            console.log(cards[0]);
+          }else{
+            var newCard = new Card();
+            newCard.address = address;
+            var CardRow = mongoose.model('Row');
+            for(var i=0; i<5; i++){
+              var newRow = new CardRow();
+              for(var j=0; j<5; j++){
+                newRow.row[j] = Math.floor(Math.random() * 15) + (15 * i);
+              }
+              newCard.nums[i] = newRow;
+              console.log(newRow);
+            }
+            console.log(newCard);
+            newCard.save(function(err){
+              if(err){
+                console.log(err);
+                throw err;
+              }
+              console.log("card saved");
+            });
+          }
+        });
       }
       socket.emit('init', JSON.stringify(hist));
     });
