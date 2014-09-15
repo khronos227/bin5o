@@ -83,8 +83,10 @@ $bingoButtonWid: ($baseWidth - $subDispWid) / 3;
               -moz-border-radius: 50%;
 	      box-shadow: 0px 0px 4px 2px rgba(128, 128, 128, 0.5);
               p{
+                padding: 0;
+                margin: 0;
                 font:{
-                  size: 15px;
+                  size: 22px;
                   family: 'Sonsie One', cursive;
                   weight: bold;
                   style: italic;
@@ -126,42 +128,6 @@ $bingoButtonWid: ($baseWidth - $subDispWid) / 3;
 
 .silver{
   background-image: linear-gradient(to top left, #A5A5A5, #BABAC2, #E8E8E8, #A5A5A5, #BABAC2)
-}
-
-@mixin bingoColor($index){
-  $c: #000000;
-  @if $index == 1{
-    $c: #00BF00;
-  }@else if $index == 2{
-    $c: #0000BF;
-  }@else if $index == 3{
-    $c: #BFBF00;
-  }@else if $index == 4{
-    $c: #BF0000;
-  }@else if $index == 5{
-    $c: #BF00BF;
-  }
-  color: $c;
-}
-
-@mixin bingoBallColor($index){
-  $c: #000000;
-  @if $index == 1{
-    $c: #00BF00;
-  }@else if $index == 2{
-    $c: #0000BF;
-  }@else if $index == 3{
-    $c: #BFBF00;
-  }@else if $index == 4{
-    $c: #BF0000;
-  }@else if $index == 5{
-    $c: #BF00BF;
-  }
-  background:{
-    color: $c;
-    image: radial-gradient(at 100px 100px,white,$c);
-    image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(#ffffff), to($c));
-  }
 }
 
 @for $i from 1 through 5{

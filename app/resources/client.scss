@@ -1,0 +1,104 @@
+@import "common";
+
+$baseWidth: 95%;
+$baseHeight: 80%;
+$dispHeight: 600px;
+$otherHeight: 160px;
+$boxWidth: 59px;
+$boxHeight: 100px;
+$subDispWid: 360px;
+
+html{
+  height: 100%;
+}
+
+body{
+  height: 94%;
+  margin-top: 20px;
+}
+
+.left-top-radius{
+  border-top-left-radius: 10px;
+}
+
+.right-top-radius{
+  border-top-right-radius: 10px;
+}
+
+.left-bottom-radius{
+  border-bottom-left-radius: 10px;
+}
+
+.right-bottom-radius{
+  border-bottom-right-radius: 10px;
+}
+
+#clientWrap{
+  width: $baseWidth;
+  margin: 0 auto;
+  background-color: #ffd6b2;
+  border-radius: 10px;
+  #mainWrap{
+    height: 99%;
+    padding: 5px;
+    margin: 0 auto;
+    #card{
+      width: 100%;
+      height: 100%;
+    }
+    #title{
+      color: white;
+      -webkit-text-stroke: 3px black;
+      text:{
+        align: center;
+      }
+      font:{
+        size: 200%;
+        family: 'Sonsie One', cursive;
+      }
+    }
+    tr{
+      height: 11%;
+    }
+    td{
+      width: 20%;
+      padding:{
+        top: 5px;
+        bottom: 5px;
+      }
+      border: 3px solid #ff9233;
+    }
+  }
+}
+
+.ballWrap{
+  /*
+  height: 12vmin;
+  width: 12vmin;
+  */
+  height: 40px;
+  width: 40px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  font:{
+    size: 130%;
+    family: 'Sonsie One', cursive;
+  }
+  p{
+    margin: 0;
+    padding: 0;
+    padding-top: 7px;
+  }
+}
+
+@for $i from 1 through 5{
+  .color#{$i}{
+    @include backColor($i);
+  }
+  .col#{$i - 1} .ballWrap{
+    @include bingoBallColor($i);
+  }
+}
+

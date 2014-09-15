@@ -22,7 +22,7 @@ exports.makeSocketIo = function(server){
             hist.push(num);
           }
           //ボール取得結果返却
-          socket.emit('getBallResult', JSON.stringify({"num": num, "hist": hist}));
+          io.emit('getBallResult', JSON.stringify({"num": num, "hist": hist}));
         });
 
         //リセット
@@ -32,6 +32,8 @@ exports.makeSocketIo = function(server){
           //リセット結果返却
           socket.emit('resetResult', JSON.stringify(hist));
         });
+      }else{ //それ以外はClientとして扱う
+        
       }
       socket.emit('init', JSON.stringify(hist));
     });
