@@ -92,103 +92,105 @@ li {
 }
 /* line 85, ../../resources/master.scss */
 #masterWrap #mainWrap #historyBoard .boardRow .histBallWrap .histBall .ball p {
-  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
   font-family: 'Sonsie One', cursive;
   font-weight: bold;
   font-style: italic;
 }
-/* line 99, ../../resources/master.scss */
+/* line 101, ../../resources/master.scss */
 #masterWrap #otherWrap {
   padding-top: 20px;
   height: 140px;
 }
-/* line 102, ../../resources/master.scss */
+/* line 104, ../../resources/master.scss */
 #masterWrap #otherWrap .bingoButton {
   width: 200px;
   height: 140px;
   float: left;
 }
-/* line 107, ../../resources/master.scss */
+/* line 109, ../../resources/master.scss */
 #masterWrap #otherWrap .resetButton {
   width: 60px;
   height: 140px;
   float: left;
 }
-/* line 111, ../../resources/master.scss */
+/* line 113, ../../resources/master.scss */
 #masterWrap #otherWrap .resetButton button {
   margin-top: 90px;
 }
-/* line 115, ../../resources/master.scss */
+/* line 117, ../../resources/master.scss */
 #masterWrap #otherWrap #subDispWrap {
   width: 290px;
   padding-left: 10px;
   float: left;
 }
-/* line 119, ../../resources/master.scss */
+/* line 121, ../../resources/master.scss */
 #masterWrap #otherWrap #subDispWrap #subDisp {
   background-color: #000000;
   height: 140px;
 }
 
-/* line 127, ../../resources/master.scss */
+/* line 129, ../../resources/master.scss */
 .silver {
   background-image: linear-gradient(to top left, #a5a5a5, #babac2, #e8e8e8, #a5a5a5, #babac2);
 }
 
-/* line 168, ../../resources/master.scss */
+/* line 134, ../../resources/master.scss */
 .color1 {
   color: #00bf00;
 }
 
-/* line 171, ../../resources/master.scss */
+/* line 137, ../../resources/master.scss */
 .ballColor1 {
   background-color: #00bf00;
   background-image: radial-gradient(at 100px 100px, white, #00bf00);
   background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#00bf00));
 }
 
-/* line 168, ../../resources/master.scss */
+/* line 134, ../../resources/master.scss */
 .color2 {
   color: #0000bf;
 }
 
-/* line 171, ../../resources/master.scss */
+/* line 137, ../../resources/master.scss */
 .ballColor2 {
-  background-color: #0000bf;
-  background-image: radial-gradient(at 100px 100px, white, #0000bf);
-  background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#0000bf));
+  background-color: #2851cc;
+  background-image: radial-gradient(at 100px 100px, white, #2851cc);
+  background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#2851cc));
 }
 
-/* line 168, ../../resources/master.scss */
+/* line 134, ../../resources/master.scss */
 .color3 {
   color: #bfbf00;
 }
 
-/* line 171, ../../resources/master.scss */
+/* line 137, ../../resources/master.scss */
 .ballColor3 {
   background-color: #bfbf00;
   background-image: radial-gradient(at 100px 100px, white, #bfbf00);
   background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#bfbf00));
 }
 
-/* line 168, ../../resources/master.scss */
+/* line 134, ../../resources/master.scss */
 .color4 {
   color: #bf0000;
 }
 
-/* line 171, ../../resources/master.scss */
+/* line 137, ../../resources/master.scss */
 .ballColor4 {
   background-color: #bf0000;
   background-image: radial-gradient(at 100px 100px, white, #bf0000);
   background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#bf0000));
 }
 
-/* line 168, ../../resources/master.scss */
+/* line 134, ../../resources/master.scss */
 .color5 {
   color: #bf00bf;
 }
 
-/* line 171, ../../resources/master.scss */
+/* line 137, ../../resources/master.scss */
 .ballColor5 {
   background-color: #bf00bf;
   background-image: radial-gradient(at 100px 100px, white, #bf00bf);
