@@ -68,6 +68,14 @@ body{
       }
       border: 3px solid #ff9233;
     }
+    td.waiting{
+      border: 3px solid #dc143c;
+      .ballWrap{
+        -webkit-animation: blink 0.7s ease-in-out infinite alternate;
+        -moz-animation: blink 0.7s ease-in-out infinite alternate;
+        animation: blink 0.7s ease-in-out infinite alternate;
+      }
+    }
   }
 }
 
@@ -100,5 +108,18 @@ body{
   .col#{$i - 1} .ballWrap{
     @include bingoBallColor($i);
   }
+}
+
+@-webkit-keyframes blink{
+    100% {opacity: 0.5;}
+    0% {opacity: 1;}
+}
+@-moz-keyframes blink{
+    100% {opacity: 0.5;}
+    0% {opacity: 1;}
+}
+@keyframes blink{
+    100% {opacity: 0.5;}
+    0% {opacity: 1;}
 }
 

@@ -63,8 +63,16 @@ body {
       padding-top: 5px;
       padding-bottom: 5px;
       border: 3px solid #ff9233; }
+    /* line 71, ../../resources/client.scss */
+    #clientWrap #mainWrap td.waiting {
+      border: 3px solid #dc143c; }
+      /* line 73, ../../resources/client.scss */
+      #clientWrap #mainWrap td.waiting .ballWrap {
+        -webkit-animation: blink 0.7s ease-in-out infinite alternate;
+        -moz-animation: blink 0.7s ease-in-out infinite alternate;
+        animation: blink 0.7s ease-in-out infinite alternate; }
 
-/* line 74, ../../resources/client.scss */
+/* line 82, ../../resources/client.scss */
 .ballWrap {
   /*
   height: 12vmin;
@@ -78,58 +86,83 @@ body {
   border-radius: 20px;
   font-size: 130%;
   font-family: 'Sonsie One', cursive; }
-  /* line 89, ../../resources/client.scss */
+  /* line 97, ../../resources/client.scss */
   .ballWrap p {
     margin: 0;
     padding: 0;
     padding-top: 7px; }
 
-/* line 97, ../../resources/client.scss */
+/* line 105, ../../resources/client.scss */
 .color1 {
   background-color: #00bf00; }
 
-/* line 100, ../../resources/client.scss */
+/* line 108, ../../resources/client.scss */
 .col0 .ballWrap {
   background-color: #00bf00;
   background-image: radial-gradient(at 100px 100px, white, #00bf00);
   background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#00bf00)); }
 
-/* line 97, ../../resources/client.scss */
+/* line 105, ../../resources/client.scss */
 .color2 {
   background-color: #2851cc; }
 
-/* line 100, ../../resources/client.scss */
+/* line 108, ../../resources/client.scss */
 .col1 .ballWrap {
   background-color: #2851cc;
   background-image: radial-gradient(at 100px 100px, white, #2851cc);
   background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#2851cc)); }
 
-/* line 97, ../../resources/client.scss */
+/* line 105, ../../resources/client.scss */
 .color3 {
   background-color: #bfbf00; }
 
-/* line 100, ../../resources/client.scss */
+/* line 108, ../../resources/client.scss */
 .col2 .ballWrap {
   background-color: #bfbf00;
   background-image: radial-gradient(at 100px 100px, white, #bfbf00);
   background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#bfbf00)); }
 
-/* line 97, ../../resources/client.scss */
+/* line 105, ../../resources/client.scss */
 .color4 {
   background-color: #bf0000; }
 
-/* line 100, ../../resources/client.scss */
+/* line 108, ../../resources/client.scss */
 .col3 .ballWrap {
   background-color: #bf0000;
   background-image: radial-gradient(at 100px 100px, white, #bf0000);
   background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#bf0000)); }
 
-/* line 97, ../../resources/client.scss */
+/* line 105, ../../resources/client.scss */
 .color5 {
   background-color: #bf00bf; }
 
-/* line 100, ../../resources/client.scss */
+/* line 108, ../../resources/client.scss */
 .col4 .ballWrap {
   background-color: #bf00bf;
   background-image: radial-gradient(at 100px 100px, white, #bf00bf);
   background-image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(white), to(#bf00bf)); }
+
+@-webkit-keyframes blink {
+  /* line 114, ../../resources/client.scss */
+  100% {
+    opacity: 0.5; }
+
+  /* line 115, ../../resources/client.scss */
+  0% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  /* line 118, ../../resources/client.scss */
+  100% {
+    opacity: 0.5; }
+
+  /* line 119, ../../resources/client.scss */
+  0% {
+    opacity: 1; } }
+@keyframes blink {
+  /* line 122, ../../resources/client.scss */
+  100% {
+    opacity: 0.5; }
+
+  /* line 123, ../../resources/client.scss */
+  0% {
+    opacity: 1; } }
