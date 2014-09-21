@@ -42,6 +42,10 @@ mongod --config /usr/local/etc/mongod.conf
 - 起動確認用接続
 mongo
 
+# release note
+### 0.0.1 (2014/09/21)
+アプリケーションひな形リリース
+
 [memo]
 - ボタン1<br>
 http://coliss.com/articles/build-websites/operation/css/css3-brushed-metal-style.html
