@@ -51,7 +51,7 @@ exports.makeSocketIo = function(server){
           numbers = [].concat(config.get('balls'));
           hist = [];
           //リセット結果返却
-          socket.emit('resetResult', JSON.stringify(hist));
+          io.emit('resetResult', JSON.stringify(hist));
         });
       }else{ //それ以外はClientとして扱う
         var address = socket.conn.remoteAddress;
@@ -69,7 +69,7 @@ exports.makeSocketIo = function(server){
               var newCol = new CardCol();
               for(var j=0; j<5; j++){
                 do{
-                  var n = Math.floor(Math.random() * 15) + (15 * i);
+                  var n = Math.floor(Math.random() * 15) + (15 * i) + 1;
                 }while(newCol.cell.indexOf(n) >= 0);
                 newCol.cell[j] = n;
               }
