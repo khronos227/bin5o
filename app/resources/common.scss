@@ -1,0 +1,67 @@
+ul, li{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style-type: none;
+}
+
+@mixin left{
+  float: left;
+}
+
+@mixin bingoColor($index){
+  $c: #000000;
+  @if $index == 1{
+    $c: #00BF00;
+  }@else if $index == 2{
+    $c: #0000BF;
+  }@else if $index == 3{
+    $c: #BFBF00;
+  }@else if $index == 4{
+    $c: #BF0000;
+  }@else if $index == 5{
+    $c: #BF00BF;
+  }
+  color: $c; 
+}
+
+@mixin bingoBallColor($index){
+  $c: #000000;
+  @if $index == 1{
+    $c: #00BF00;
+  }@else if $index == 2{
+    $c: #4169e1;
+$c: #2851cc;
+  }@else if $index == 3{
+    $c: #BFBF00;
+  }@else if $index == 4{
+    $c: #BF0000;
+  }@else if $index == 5{
+    $c: #BF00BF;
+  }
+  background:{
+    color: $c; 
+    image: radial-gradient(at 100px 100px,white,$c);
+    image: -webkit-gradient(radial, 30% 30%, 0, 30% 30%, 30, from(#ffffff), to($c));
+  }
+}
+
+@mixin backColor($index){
+  $c: #000000;
+  @if $index == 1{
+    $c: #00BF00;
+  }@else if $index == 2{
+    $c: #4169e1;
+$c: #2851cc;
+  }@else if $index == 3{
+    $c: #BFBF00;
+  }@else if $index == 4{
+    $c: #BF0000;
+  }@else if $index == 5{
+    $c: #BF00BF;
+  }
+  background-color: $c; 
+}
+
