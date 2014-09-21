@@ -3,19 +3,27 @@ var mongoose = require('mongoose');
 var db = mongoose.connect('mongodb://localhost/bin5o');
 
 var Schema = mongoose.Schema;
-var CardRows = new Schema({
-  row: [Number]
+var CardCols = new Schema({
+  cell: [Number]
 });
 var Cards = new Schema({
   address: String,
-  nums: [CardRows]
+  nums: [CardCols]
 });
-mongoose.model('Row', CardRows);
+mongoose.model('Col', CardCols);
 mongoose.model('Card', Cards);
 
 exports.makeSocketIo = function(server){
   var numbers = [].concat(config.get('balls'));
   var hist = []; 
+  var Card = mongoose.model('Card');
+  Card.remove({}, function(err){
+    if(err){
+      console.log("fail to remove Card info");
+    }else{
+      console.log("removed Card info");
+    }
+  });
 
   console.log("create socket.io instance");
   var io = require('socket.io')(server);
@@ -47,24 +55,27 @@ exports.makeSocketIo = function(server){
         });
       }else{ //それ以外はClientとして扱う
         var address = socket.conn.remoteAddress;
-        var Card = mongoose.model('Card');
         Card.find({'address': address}, function(err, cards){
           if(cards.length > 0){
             console.log("card was found");
             console.log(cards[0]);
+            var card = cards[0];
           }else{
+            console.log("create new card for " . address);
             var newCard = new Card();
             newCard.address = address;
-            var CardRow = mongoose.model('Row');
+            var CardCol = mongoose.model('Col');
             for(var i=0; i<5; i++){
-              var newRow = new CardRow();
+              var newCol = new CardCol();
               for(var j=0; j<5; j++){
-                newRow.row[j] = Math.floor(Math.random() * 15) + (15 * i);
+                do{
+                  var n = Math.floor(Math.random() * 15) + (15 * i);
+                }while(newCol.cell.indexOf(n) >= 0);
+                newCol.cell[j] = n;
               }
-              newCard.nums[i] = newRow;
-              console.log(newRow);
+              newCard.nums[i] = newCol;
+              console.log(newCol);
             }
-            console.log(newCard);
             newCard.save(function(err){
               if(err){
                 console.log(err);
@@ -72,7 +83,9 @@ exports.makeSocketIo = function(server){
               }
               console.log("card saved");
             });
+            var card = newCard;
           }
+          socket.emit('cardInfo', JSON.stringify(card));
         });
       }
       socket.emit('init', JSON.stringify(hist));
