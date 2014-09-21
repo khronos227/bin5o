@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <link rel='stylesheet' href='/stylesheets/client.css' />
+<link href='http://fonts.googleapis.com/css?family=Sonsie+One&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/javascript/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/javascript/client.js"></script>
+  </head>
+  <body>
+    <div id="clientWrap">
+      <div id="mainWrap">
+        <table id="card">
+          <tr id="title">
+            <td class="color1 left-top-radius">b</td>
+            <td class="color2">i</td>
+            <td class="color3">n</td>
+            <td class="color4">5</td>
+            <td class="color5 right-top-radius">o</td>
+          </tr>
+          <% for(var i=0; i<5; i++){ %>
+            <tr class="row<%=i%>">
+            <% for(var j=0; j<5; j++){ %>
+              <td class="col<%=j%><%if(i==4){if(j==0){%> left-bottom-radius<%}else if(j==4){%> right-bottom-radius<%}}%>">
+                <div class="ballWrap">
+                  <div class="ball">
+                    <p>75</p>
+                  </div>
+                </div>
+              </td>
+            <% } %>
+            </tr>
+          <% } %>
+        </table>
+      </div>
+      <div id="waiting">
+        <div class="space"></div>
+        <p>~リーチ!!~</p>
+      </div>
+      <div id="bingo">
+        <div class="space"></div>
+        <p>
+          ~<span class="text-color1">ビ</span><span class="text-color2">ン</span><span class="text-color3">ゴ</span><span class="text-color4">!</span><span class="text-color5">!</span>~
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
