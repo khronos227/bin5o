@@ -12,6 +12,8 @@
     this.hist = [];
     this.waiting = false;
     this.bingo = false;
+    this.waitingPanel = $('#waiting');
+    this.bingoPanel = $('#bingo');
 
     for(var i=0; i<this.length; i++){
       var col = [];
@@ -127,6 +129,7 @@
           );
           self.clicked[i][j] = 0;
           self.card[i][j].parent().removeClass('waiting');
+          self.card[i][j].parent().removeClass('bingo');
         }
         self.counts[0][i] = 0;
         self.counts[1][i] = 0;
@@ -134,6 +137,9 @@
       self.counts[2] = [0, 0];
       self.waiting = false;
       self.bingo = false;
+      self.waitingPanel.removeClass('show');
+      self.bingoPanel.removeClass('locate');
+      self.bingoPanel.removeClass('show');
     },
     //ビンゴ判定
     judgeBingo: function(){
@@ -145,6 +151,9 @@
       //縦に関してビンゴかどうか
       for(var i=0; i<self.length; i++){
         if(self.counts[0][i] == self.length){
+          for(var j=0; j<self.length; j++){
+            self.card[i][j].parent().addClass('bingo');
+          }
           console.log("ビンゴ");
           bingo = true;
         }
@@ -152,21 +161,31 @@
       //横に関してビンゴかどうか
       for(var i=0; i<self.length; i++){
         if(self.counts[1][i] == self.length){
+          for(var j=0; j<self.length; j++){
+            self.card[j][i].parent().addClass('bingo');
+          }
           console.log("ビンゴ");
           bingo = true;
         }
       }
       //右下への対角に関してリーチかどうか
       if(self.counts[2][0] == self.length){
+        for(var i=0; i<self.length; i++){
+          self.card[i][i].parent().addClass('bingo');
+        }
         console.log("ビンゴ");
         bingo = true;
       }
       //左下への対角に関してリーチかどうか
       if(self.counts[2][1] == self.length){
+        for(var i=0; i<self.length; i++){
+          self.card[i][self.length - i - 1].parent().addClass('bingo');
+        }
         console.log("ビンゴ");
         bingo = true;
       }
       if(bingo){
+        self.resetWaitingAnimation();
         self.drawBingo();
         self.bingo = bingo;
         return;
@@ -226,6 +245,10 @@
       var self = this;
       if(!self.waiting){
         console.log("リーチ描画");
+        self.waitingPanel.addClass('show');
+        setTimeout(function(){
+          self.waitingPanel.removeClass('show');
+        }, 2000);
       }
     },
     //ビンゴ描画
@@ -233,6 +256,10 @@
       var self = this;
       if(!self.bingo){
         console.log("ビンゴ描画");
+        self.bingoPanel.addClass('locate');
+        setTimeout(function(){
+          self.bingoPanel.addClass('show');
+        }, 50);
       }
     }
   }
