@@ -11,6 +11,7 @@
     //履歴用
     this.hist = [];
     this.waiting = false;
+    this.bingo = false;
 
     for(var i=0; i<this.length; i++){
       var col = [];
@@ -131,10 +132,45 @@
         self.counts[1][i] = 0;
       }
       self.counts[2] = [0, 0];
+      self.waiting = false;
+      self.bingo = false;
     },
     //ビンゴ判定
     judgeBingo: function(){
       var self = this;
+      if(self.bingo){
+        return;
+      }
+      var bingo = false;
+      //縦に関してビンゴかどうか
+      for(var i=0; i<self.length; i++){
+        if(self.counts[0][i] == self.length){
+          console.log("ビンゴ");
+          bingo = true;
+        }
+      }
+      //横に関してビンゴかどうか
+      for(var i=0; i<self.length; i++){
+        if(self.counts[1][i] == self.length){
+          console.log("ビンゴ");
+          bingo = true;
+        }
+      }
+      //右下への対角に関してリーチかどうか
+      if(self.counts[2][0] == self.length){
+        console.log("ビンゴ");
+        bingo = true;
+      }
+      //左下への対角に関してリーチかどうか
+      if(self.counts[2][1] == self.length){
+        console.log("ビンゴ");
+        bingo = true;
+      }
+      if(bingo){
+        self.drawBingo();
+        self.bingo = bingo;
+        return;
+      }
       //縦に関してリーチかどうか
       for(var i=0; i<self.length; i++){
         if(self.counts[0][i] == self.length - 1){
@@ -190,6 +226,13 @@
       var self = this;
       if(!self.waiting){
         console.log("リーチ描画");
+      }
+    },
+    //ビンゴ描画
+    drawBingo: function(){
+      var self = this;
+      if(!self.bingo){
+        console.log("ビンゴ描画");
       }
     }
   }
